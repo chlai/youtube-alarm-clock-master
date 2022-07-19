@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Golf Booking</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header>Golf Booking<a class="btn btn-red btn-new">New Alarm</a> <a class="btn btn-green btn-tabdelete">- tabs</a><a class="btn btn-green btn-reload">+ Tabs</a></header>
+  <main>
+    <section class="home-view">
+	    <ul class="alarms-list">
+		    
+    	</ul>
+      <p class="no-alarm">You have no alarm. Click 'New Alarm' button to create one.</p>
+    </section>
+
+    <section class="create-view" hidden>
+      <form id="form-create">
+        <div class="row">
+          <div class="input-field">
+            <input name="alarm-name" type="text" class="validate" placeholder="Alarm Name" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field date">
+            <label for="alarm-date"></label>
+            <input type="date" name="alarm-date" class="datepicker" required>
+          </div>
+          <div class="input-field time">
+            <input type="time" name="alarm-time" class="timepicker" step ="1" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field">
+            <input name="video-link" type="text" class="validate" placeholder="Youtube Video Link" required>
+          </div>
+        </div>
+        <button type="button" class="btn btn-default btn-back">Back</button>
+        <button type="submit" class="btn btn-green btn-create">Create</button>
+      </form>
+    </section>
+
+    <section class="update-view" hidden>
+      <form id="form-update">
+        <div class="row">
+          <div class="input-field">
+            <input name="alarm-name" type="text" class="validate" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field date">
+            <label for="alarm-date"></label>
+            <input type="date" name="alarm-date" class="datepicker" required>
+          </div>
+          <div class="input-field time">
+            <input type="time" name="alarm-time" class="timepicker" step ="1" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field">
+            <input name="video-link" type="text" class="validate" required>
+          </div>
+        </div>
+        <button type="button" class="btn btn-default btn-back">Back</button>
+        <button type="button" class="btn btn-red btn-delete" id="delete-alarm">Delete</button>
+        <button type="submit" class="btn btn-green btn-update">Update</button>
+      </form>
+    </section>
+
+    <div class="loader"><img src="img/spinner.gif" width="100"></div>
+	</main>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
+  
+</body>
+</html>
